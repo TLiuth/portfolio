@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@theme {
+  /* Deep charcoal backgrounds for sophistication */
+  --color-colors-header-footer: #0a0e27;
+  --color-colors-header-footer-secondary: #151b3d;
+
+  /* Rich teal/cyan progression for depth */
+  --color-colors-dark-match: #0d3b4f;
+  --color-colors-middle-match: #14b8a6;
+  --color-colors-light-match: #2dd4bf;
+
+  /* Accent colors */
+  --color-colors-light-green: #34d399;
+  --color-colors-contrast-match: #fbbf24;
+  --color-colors-contrast-darker: #d97706;
+}
+
+/* @theme {
+  --color-colors-header-footer: #0f172a;
+  --color-colors-header-footer-secondary: #1e293b;
+  --color-colors-dark-match: #1e3a8a;
+  --color-colors-middle-match: #3b82f6;
+  --color-colors-light-match: #60a5fa;
+  --color-colors-light-green: #10b981;
+  --color-colors-contrast-match: #fbbf24;
+  --color-colors-contrast-darker: #c99400;
+} */
+
+/* @theme {
+  --color-colors-header-footer: #ce4912;
+  --color-colors-header-footer-secondary: #f36b1c;
+  --color-colors-dark-match: #042c71;
+  --color-colors-middle-match: #084387;
+  --color-colors-light-match: #0b6ab0;
+  --color-colors-light-green: #90e984;
+  --color-colors-contrast-match: #f8d605;
+} */
+
+@theme {
+  --color-custom-darkBlue: #01303f;
+  --color-custom-darkBlueSecondary: #02577a;
+  --color-custom-middleBlue: #02a9f7;
+  --color-custom-lightBlueSecondary: #89d6fb;
+  --color-custom-lightBlue: #d4f0fc;
+  --color-custom-matchingYellow: #f9f871;
+  --color-custom-light-matchingGreen: #a6d46d;
+  --color-custom-middle-matchingGreen: #61ac6b;
+  --color-custom-dark-matchingGreen: #298262;
+  --color-custom-matchingOrange: #ff8a44;
+  --font-pixel: var(--font-pixelify);
+}
+
+@layer utilities {
+  .boxed {
+    @apply mx-auto lg:max-w-5xl xl:max-w-7xl w-full;
+    @apply px-7 xl:px-0;
+  }
+}
