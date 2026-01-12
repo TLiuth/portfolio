@@ -1,6 +1,6 @@
 "use client";
 
-import Projeto from "@/app/programacao/projetos.entity";
+import Projeto from "@/constants/projetos.entity";
 import Carousel from "./Carousel";
 import Image from "next/image";
 
@@ -20,8 +20,10 @@ export default function ProjetosCarousel(props: { projetos: Projeto[] }) {
             ></Image>
           </div>
           <div className="flex flex-col gap-2">
-            <span className="text-3xl">{projeto.titulo}</span>
-            <span className="text-xl">{projeto.descricao}</span>
+            <span className="text-3xl font-bold text-zinc-900">
+              {projeto.titulo}
+            </span>
+            <span className="text-xl text-zinc-700">{projeto.descricao}</span>
           </div>
         </div>
       )}

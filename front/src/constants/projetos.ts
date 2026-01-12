@@ -1,4 +1,4 @@
-import Projeto from "src/projeto/projeto.entity";
+import Projeto from "./projetos.entity"
 
 const projetos : Projeto[] = [
     {

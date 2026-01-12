@@ -27,11 +27,15 @@ export default function CardContatos(props: CardContatosProps) {
       }}
     >
       <Link
-        className="flex flex-1 items-center justify-center  gap-3 group-hover:text-colors-light-match"
+        className="flex flex-1 items-center justify-center  gap-3 text-zinc-900 group-hover:text-colors-light-match"
         href={props.href}
         target="_blank"
       >
-        <props.icone size={60} stroke={1.5} className="text-8x " />
+        <props.icone
+          size={60}
+          stroke={1.5}
+          className="text-zinc-900 group-hover:text-colors-light-match"
+        />
         <span className="text-2xl font-bold">{props.titulo}</span>
       </Link>
     </div>

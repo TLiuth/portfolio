@@ -28,13 +28,15 @@ export default function CardApresentacao(props: CardApresentacaoProps) {
       <Image
         height={267}
         width={200}
-        className="rounded-2xl shadow-2xl shadow-black border-2 border-black"
+        className="rounded-2xl shadow-2xl shadow-black border-2 border-black object-cover"
         src={props.src}
         alt={altText}
       ></Image>
       <div className="flex flex-col">
-        <span className="text-2xl font-bold">{props.titulo}</span>
-        <span className="text-1xl">{props.texto}</span>
+        <span className="text-2xl font-bold text-zinc-900">{props.titulo}</span>
+        <span className="text-1xl text-zinc-800 text-justify">
+          {props.texto}
+        </span>
       </div>
     </div>
   );

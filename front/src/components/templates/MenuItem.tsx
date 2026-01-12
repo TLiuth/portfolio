@@ -17,7 +17,10 @@ export default function MenuItem(props: MenuItemProps) {
         stroke={1.5}
         className="text-colors-contrast-match group-hover:text-white"
       />
-      <Link href={props.href} className="text-xl">
+      <Link
+        href={props.href}
+        className="text-xl text-zinc-300 group-hover:text-zinc-900"
+      >
         <span className={props.font}>{props.texto}</span>
       </Link>
     </div>

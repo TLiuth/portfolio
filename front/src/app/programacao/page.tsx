@@ -10,8 +10,6 @@ import { VscVscodeInsiders } from "react-icons/vsc";
 import { FaGithub } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import getProjetos from "@/data/service/obterProjetos";
-import CardApresentacao from "@/components/templates/CardApresentacao";
-import Carousel from "@/components/templates/Carousel";
 import ProjetosCarousel from "@/components/templates/ProjetosCarousel";
 import { FaDocker } from "react-icons/fa";
 
@@ -42,13 +40,6 @@ export default async function Home() {
               (projeto) => projeto.tipo === "programacao"
             )}
           ></ProjetosCarousel>
-          {/* {projetos.map((projeto) => (
-            <CardApresentacao
-              titulo={projeto.titulo}
-              texto={projeto.descricao}
-              src={projeto.imagemUrl}
-            ></CardApresentacao>
-          ))} */}
         </div>
       </div>
     </Pagina>

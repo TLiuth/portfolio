@@ -27,18 +27,18 @@ body {
 }
 
 @theme {
-  /* Deep charcoal backgrounds for sophistication */
-  --color-colors-header-footer: #0a0e27;
-  --color-colors-header-footer-secondary: #151b3d;
+  /* Professional slate backgrounds */
+  --color-colors-header-footer: #0f172a;
+  --color-colors-header-footer-secondary: #1e293b;
 
-  /* Rich teal/cyan progression for depth */
-  --color-colors-dark-match: #0d3b4f;
-  --color-colors-middle-match: #14b8a6;
-  --color-colors-light-match: #2dd4bf;
+  /* Zinc progression for sophisticated neutrals */
+  --color-colors-dark-match: #3f3f46;
+  --color-colors-middle-match: #71717a;
+  --color-colors-light-match: #e4e4e7;
 
-  /* Accent colors */
-  --color-colors-light-green: #34d399;
-  --color-colors-contrast-match: #fbbf24;
+  /* Refined accent colors */
+  --color-colors-light-green: #10b981;
+  --color-colors-contrast-match: #f59e0b;
   --color-colors-contrast-darker: #d97706;
 }
 
@@ -64,16 +64,16 @@ body {
 } */
 
 @theme {
-  --color-custom-darkBlue: #01303f;
-  --color-custom-darkBlueSecondary: #02577a;
-  --color-custom-middleBlue: #02a9f7;
-  --color-custom-lightBlueSecondary: #89d6fb;
-  --color-custom-lightBlue: #d4f0fc;
-  --color-custom-matchingYellow: #f9f871;
-  --color-custom-light-matchingGreen: #a6d46d;
-  --color-custom-middle-matchingGreen: #61ac6b;
-  --color-custom-dark-matchingGreen: #298262;
-  --color-custom-matchingOrange: #ff8a44;
+  --color-custom-darkBlue: #1e293b;
+  --color-custom-darkBlueSecondary: #334155;
+  --color-custom-middleBlue: #64748b;
+  --color-custom-lightBlueSecondary: #cbd5e1;
+  --color-custom-lightBlue: #fafafa;
+  --color-custom-matchingYellow: #fbbf24;
+  --color-custom-light-matchingGreen: #86efac;
+  --color-custom-middle-matchingGreen: #10b981;
+  --color-custom-dark-matchingGreen: #059669;
+  --color-custom-matchingOrange: #f59e0b;
   --font-pixel: var(--font-pixelify);
 }
 

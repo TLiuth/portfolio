@@ -19,8 +19,13 @@ export default function Menu() {
           icone={MdOutlineDataThresholding}
         />
         <hr className="text-colors-contrast-match mt-5" />
-        <MenuItem texto="Mapas" href="/" icone={MdDraw} font="font-pixel" />
-        <MenuItem texto="Escrita" href="/" icone={FaPenFancy} />
+        <MenuItem
+          texto="Mapas"
+          href="/mapas"
+          icone={MdDraw}
+          font="font-pixel"
+        />
+        <MenuItem texto="Escrita" href="/escrita" icone={FaPenFancy} />
       </nav>
       <Link
         className="group bg-colors-contrast-match rounded-2xl px-4 py-4 flex justify-center items-center gap-2 hover:bg-colors-contrast-darker absolute top-170 left-1/2 -translate-x-1/2 w-64"
