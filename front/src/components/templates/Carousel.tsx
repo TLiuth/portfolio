@@ -10,8 +10,46 @@ interface CarouselProps<T> {
 
 export default function Carousel<T>(props: CarouselProps<T>) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(0);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      setCurrentIndex((prev) =>
+        prev + 1 <= props.items.length - 1 ? prev + 1 : 0,
+      );
+    }
+    if (isRightSwipe) {
+      setCurrentIndex((prev) =>
+        prev - 1 < 0 ? props.items.length - 1 : prev - 1,
+      );
+    }
+  };
+
   return (
-    <div className="relative px-6 sm:px-8 md:px-12">
+    <div
+      className="relative px-6 sm:px-8 md:px-12"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
       {props.renderItem(props.items[currentIndex])}
 
       <button
