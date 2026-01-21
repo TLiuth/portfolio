@@ -19,10 +19,10 @@ Trabalho como freelancer online desde 2020. Gosto muito de estabelecer rotas de 
 Tenho conhecimento de linguagens de programação como C, C++, Python, Java e Typescript. Sou organizado e resolutivo, e tenho experiência com liderança de equipes. Todas essas habilidades combinadas me ajudam na resolução de problemas e na execução de projetos com melhor clareza e qualidade.
 Estou sempre estudando e buscando novos aprendizados, e quero oportunidades de crescer e adquirir experiência."
         ></CardApresentacao>
-        <span className="text-colors-dark-match pl-4 text-5xl pt-14 font-bold">
+        <span className="text-colors-dark-match pl-2 sm:pl-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl pt-8 sm:pt-10 md:pt-14 font-bold">
           Contacts
         </span>
-        <div className="flex flex-1 gap-6 align-middle items-center mt-6">
+        <div className="flex flex-col sm:flex-row flex-1 gap-3 sm:gap-4 md:gap-6 align-middle items-center mt-4 sm:mt-5 md:mt-6">
           <CardContatos
             icone={FaLinkedin}
             titulo="My Linkedin"

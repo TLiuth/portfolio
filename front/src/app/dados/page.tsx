@@ -16,8 +16,10 @@ export default async function Home() {
   return (
     <Pagina>
       <div className="flex flex-col flex-1 gap-6">
-        <span className="text-4xl text-colors-dark-match">Tecnologias</span>
-        <div className="grid grid-cols-6 gap-x-1 gap-y-4">
+        <span className="text-2xl sm:text-3xl md:text-4xl text-colors-dark-match">
+          Tecnologias
+        </span>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-2 sm:gap-x-3 md:gap-x-4 gap-y-3 sm:gap-y-4">
           <CardTechs icone={FaPython} titulo="Python"></CardTechs>
           <CardTechs icone={SiPandas} titulo="Pandas"></CardTechs>
           <CardTechs icone={SiJupyter} titulo="Jupyter Lab"></CardTechs>
@@ -28,7 +30,9 @@ export default async function Home() {
           ></CardTechs>
           <CardTechs icone={SiPandas} titulo="Pandas"></CardTechs>
         </div>
-        <span className="text-4xl text-colors-dark-match">Projetos</span>
+        <span className="text-2xl sm:text-3xl md:text-4xl text-colors-dark-match">
+          Projetos
+        </span>
         <div className="flex flex-col flex-1 gap-5">
           <ProjetosCarousel
             projetos={projetos.filter((projeto) => projeto.tipo === "dados")}

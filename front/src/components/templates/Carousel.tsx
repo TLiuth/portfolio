@@ -11,21 +11,21 @@ interface CarouselProps<T> {
 export default function Carousel<T>(props: CarouselProps<T>) {
   const [currentIndex, setCurrentIndex] = useState(0);
   return (
-    <div className="relative px-12">
+    <div className="relative px-6 sm:px-8 md:px-12">
       {props.renderItem(props.items[currentIndex])}
 
       <button
         className="absolute left-0 top-1/2 -translate-y-1/2 z-10"
         onClick={() =>
           setCurrentIndex((prev) =>
-            prev - 1 < 0 ? props.items.length - 1 : prev - 1
+            prev - 1 < 0 ? props.items.length - 1 : prev - 1,
           )
         }
         // onClick={() => setCurrentIndex((prev) => Math.max(0, prev - 1))}
       >
         <IoChevronBack
-          size={50}
-          className="hover:text-zinc-900 text-zinc-500"
+          size={30}
+          className="w-[30px] h-[30px] sm:w-10 sm:h-10 md:w-[50px] md:h-[50px] hover:text-zinc-900 text-zinc-500"
         />
       </button>
       <button
@@ -33,14 +33,14 @@ export default function Carousel<T>(props: CarouselProps<T>) {
         onClick={
           () =>
             setCurrentIndex((prev) =>
-              prev + 1 <= props.items.length - 1 ? prev + 1 : 0
+              prev + 1 <= props.items.length - 1 ? prev + 1 : 0,
             )
           // setCurrentIndex((prev) => Math.min(props.items.length - 1, prev + 1))
         }
       >
         <IoChevronForward
-          size={50}
-          className="hover:text-zinc-900 text-zinc-500"
+          size={30}
+          className="w-[30px] h-[30px] sm:w-10 sm:h-10 md:w-[50px] md:h-[50px] hover:text-zinc-900 text-zinc-500"
         />
       </button>
       <div className="flex justify-center gap-2 mt-4">

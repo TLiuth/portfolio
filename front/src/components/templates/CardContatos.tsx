@@ -15,7 +15,7 @@ export default function CardContatos(props: CardContatosProps) {
 
   return (
     <div
-      className="group flex items-center flex-1 gap-3 p-3 h-32 rounded-2xl hover:!bg-colors-dark-match"
+      className="group flex items-center w-full sm:flex-1 gap-2 sm:gap-3 p-2 sm:p-3 h-24 sm:h-32 rounded-2xl hover:!bg-colors-dark-match"
       style={{
         backgroundColor: props.corFundo
           ? `var(--color-${props.corFundo})`
@@ -27,16 +27,16 @@ export default function CardContatos(props: CardContatosProps) {
       }}
     >
       <Link
-        className="flex flex-1 items-center justify-center  gap-3 text-zinc-900 group-hover:text-colors-light-match"
+        className="flex flex-1 items-center justify-center gap-2 sm:gap-3 text-zinc-900 group-hover:text-colors-light-match"
         href={props.href}
         target="_blank"
       >
         <props.icone
-          size={60}
+          size={40}
+          className="w-10 h-10 sm:w-[60px] sm:h-[60px] text-zinc-900 group-hover:text-colors-light-match"
           stroke={1.5}
-          className="text-zinc-900 group-hover:text-colors-light-match"
         />
-        <span className="text-2xl font-bold">{props.titulo}</span>
+        <span className="text-lg sm:text-2xl font-bold">{props.titulo}</span>
       </Link>
     </div>
   );

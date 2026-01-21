@@ -14,7 +14,7 @@ export default function CardApresentacao(props: CardApresentacaoProps) {
 
   return (
     <div
-      className="gap-5 flex w-100% p-10  rounded-2xl"
+      className="gap-3 sm:gap-5 flex flex-col sm:flex-row w-full p-4 sm:p-6 md:p-10 rounded-2xl"
       style={{
         backgroundColor: props.corFundo
           ? `var(--color-${props.corFundo})`
@@ -28,13 +28,15 @@ export default function CardApresentacao(props: CardApresentacaoProps) {
       <Image
         height={267}
         width={200}
-        className="rounded-2xl shadow-2xl shadow-black border-2 border-black object-cover"
+        className="rounded-2xl shadow-2xl shadow-black border-2 border-black object-cover w-full sm:w-auto h-auto sm:h-[267px]"
         src={props.src}
         alt={altText}
       ></Image>
       <div className="flex flex-col">
-        <span className="text-2xl font-bold text-zinc-900">{props.titulo}</span>
-        <span className="text-1xl text-zinc-800 text-justify">
+        <span className="text-xl sm:text-2xl font-bold text-zinc-900">
+          {props.titulo}
+        </span>
+        <span className="text-base sm:text-xl text-zinc-800 text-justify">
           {props.texto}
         </span>
       </div>
